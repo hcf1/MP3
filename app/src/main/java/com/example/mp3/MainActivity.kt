@@ -1,7 +1,10 @@
 package com.example.mp3
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.mp3.databinding.ActivityMainBinding
@@ -38,6 +41,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun downLoadClick() {
-//todo 显示下载列表
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        val dirUri = FileProvider.getUriForFile(
+            this,
+            "myAuthority",
+            this.getExternalFilesDir("download")!!
+        )
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
+        intent.setDataAndType(dirUri, "*/*")
+        startActivity(intent)
     }
 }

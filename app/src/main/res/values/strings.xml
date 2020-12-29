@@ -16,7 +16,7 @@
     <!--    2.APP私有目录-->
     <!--    地址：/storage/emulated/0/Android/data/包名/files-->
     <!--    私有目录存放app的私有文件，会随着App的卸载而删除-->
-    <string name="save_path">a.jpg</string>
+    <string name="save_path">a.mp3</string>
     <!--	cdata是xml语法，里面表示纯文本内容，不需要转义-->
     <!--    在XML中，需要转义的字符有：
         　　(1)&　　　&amp;

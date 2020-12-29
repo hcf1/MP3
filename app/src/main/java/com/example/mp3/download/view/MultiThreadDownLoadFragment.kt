@@ -1,8 +1,6 @@
 package com.example.mp3.download.view
 
-import android.Manifest
 import android.content.Context
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -21,7 +19,6 @@ import com.example.mp3.download.utils.DownUtil
 import java.io.File
 import java.lang.ref.WeakReference
 import java.util.*
-import kotlin.collections.ArrayList
 
 class MultiThreadDownLoadFragment : Fragment() {
     private lateinit var urlTextView: EditText
